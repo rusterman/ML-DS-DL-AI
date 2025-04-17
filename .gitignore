@@ -1,0 +1,89 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+.venv/
+.env/
+
+# VS Code settings
+.vscode/
+
+# macOS files
+.DS_Store
+
+# PyCharm
+.idea/
+
+# Logs and databases
+*.log
+*.sqlite3
+*.db
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Python egg files
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+sdist/
+develop-eggs/
+.installed.cfg
+lib/
+lib64/
+pip-wheel-metadata/
+
+# Coverage and test reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# pytest
+.pytest_cache/
+
+# mypy
+.mypy_cache/
+
+# Pylint
+.pylint.d/
+
+# pyright
+pyrightconfig.json
+typings/
+
+# Bandit security reports
+bandit.yaml
+
+# Profiling
+.prof
+
+# Jupyter Lab settings
+.lab/
+
+# Local secrets
+*.env
+.env.*
+secrets/
+config.json
+credentials.json
+
+# IPython history
+.profile_default/
+.ipython/
+
+# Others
+*.swp
