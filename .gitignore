@@ -87,3 +87,6 @@ credentials.json
 
 # Others
 *.swp
+playground.py
+test.py
+demo.py
