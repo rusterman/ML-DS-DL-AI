@@ -17,10 +17,3 @@
 """
 # Your Solution...
 
-
-"""
-    3. Vertex Form Conversion
-    Exercise:
-    Convert 2x² - 8x + 6 into vertex form a(x - h)² + k. Compute and print the vertex coordinates (h, k).
-"""
-# Your Solution...

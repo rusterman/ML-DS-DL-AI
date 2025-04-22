@@ -28,14 +28,3 @@ elif D == 0:
 else:
     nature = "Complex"
 print(f"Example 2: Nature of roots: {nature}")  # Real and equal
-
-
-"""
-    3. Vertex Form Conversion
-    Example:
-    Convert x² - 6x + 5 into vertex form a(x - h)² + k.
-"""
-a, b, c = 1, -6, 5
-h = -b / (2*a)
-k = c - (b**2) / (4*a)
-print(f"Example 3: Vertex: ({h}, {k}), form: {a}(x - {h})**2 + {k}")  # Vertex: (3.0, -4.0)
