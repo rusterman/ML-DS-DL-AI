@@ -8,11 +8,7 @@
     Solve the equation x² - 5x + 6 = 0. Compute the discriminant and both roots, then print the results.
 """
 # Your Solution...
-a, b, c = 1, -5, 6
-D = b**2 - 4*a*c
-root1 = (-b + D**0.5)/(2*a)
-root2 = (-b - D**0.5)/(2*a)
-print(f"root1: {root1}, root2: {root2}")
+
 
 """
     2. Nature of Roots
