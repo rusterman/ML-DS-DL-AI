@@ -13,7 +13,8 @@
 """
     2. Nature of Roots
     Exercise:
-    Determine the nature of roots for x² + 4x + 5 = 0. Print a message indicating whether the roots are real and distinct, real and equal, or complex.
+    Determine the nature of roots for x² + 4x + 5 = 0. 
+    Print a message indicating whether the roots are real and distinct, real and equal, or complex.
 """
 # Your Solution...
 
