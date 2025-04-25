@@ -1,121 +1,73 @@
-"""
-    Polynomial Equations: Exercises
-
-    This file contains practice exercises for evaluating, solving, and analyzing polynomial equations.
-"""
-
-import cmath
+""" Summation Exercises """
 
 """
-    1. Evaluate Polynomial
+    1. Simple Summation: ∑₍ᵢ₌₁₎ⁿ i
+
     Exercise:
-    Use the evaluate_polynomial function to compute the value of 3x^3 - 2x^2 + x - 5 at x = 2.
-    Print the result.
+    Compute the sum of integers from 1 to 50. Write code to compute and print the result.
 """
 
 
 # Your Solution...
-def evaluate_polynomial(coefficients, x):
-    result = 0
-    degree = len(coefficients) - 1
-
-    for i, coefficient in enumerate(coefficients):
-        result += coefficient * x ** (degree - i)
-
-    return result
+def simple_summation(n):
+    total = 0
+    for i in range(1, 50):
+        total += i
+    return total
 
 
 """
-    2. Linear Equation
+    2. Summation with Generator Expression
+       Use Python’s built-in sum() with a generator for custom f(i).
+
     Exercise:
-    Solve the linear equation 5x + 7 = 0 using the solve_linear function.
-    Print the solution.
+    Compute the sum of even numbers from 2 to 20 using sum() and a generator expression. Print the result.
 """
 
 
 # Your Solution...
-def solve_linear(a, b):
-    if a == 0:
-        raise ValueError("a cannot be zero")
+def summation_range(a, b, func=lambda x: x):
+    return sum(func(i) for i in range(a, b + 1))
 
-    return -b / a
+
+s
+print(summation_range(1, 5, lambda x: x ** 2))
+
+
+def summation_range(a, b, func=lambda x: x):
+    return sum(func(i) for i in range(a, b + 1))
 
 
 """
-    3. Quadratic Formula
+    3. Symbolic Summation with Sympy
+       Compute symbolic sums like ∑₍ᵢ₌₁₎ⁿ i².
+
     Exercise:
-    Solve the equation x^2 - 5x + 6 = 0. Compute the discriminant and both roots using the solve_quadratic function.
-    Print the discriminant and roots.
+    Symbolically compute ∑₍ᵢ₌₁₎ⁿ i² using sympy, simplify the expression, and print both the symbolic formula and its value for n=10.
+"""
+# Your Solution...
+from sympy import symbols, summation
+
+i, n = symbols('i n')
+expr = summation(i, (i, 1, n))
+print(f"Symbolic sum ∑₍ᵢ₌₁₎ⁿ i = {expr}")
+print(f"For n = 5: {expr.subs(n, 5)}")
+
+"""
+    4. Double Summation for Multiplication
+       Express a * b as ∑₍ᵢ₌₁₎ᵃ ∑₍ⱼ₌₁₎ᵇ 1.
+
+    Exercise:
+    Write code that implements multiplication of a and b solely using a double summation.  
+    For example, for a=4 and b=5, your code should compute 20 by summing 1 over the appropriate ranges. Print the result.
 """
 
 
 # Your Solution...
-def solve_quadratic(a, b, c):
-    if a == 0:
-        return solve_linear(b, c)
 
-    d = a * b - 4 * a * c
-    sqrt_d = cmath.sqrt(d)
-    root1 = (-b + sqrt_d) / (2 * a)
-    root2 = (-b - sqrt_d) / (2 * a)
-
-    return [root1, root2]
-
-
-"""
-    4. Nature of Roots
-    Exercise:
-    Determine the nature of roots for x^2 + 4x + 5 = 0 using solve_quadratic and discriminant logic.
-    Print a message indicating whether the roots are real and distinct, real and equal, or complex.
-"""
-
-
-# Your Solution...
-def nature_of_roots(a, b, c):
-    d = a * b - 4 * a * c
-
-    if d > 0:
-        print("The roots are real and distinct")
-    elif d == 0:
-        print("The roots are real")
-    else:
-        print("The roots are in complex plane")
-
-    return solve_quadratic(a, b, c)
-
-
-"""
-    5. Cubic Roots
-    Exercise:
-    Solve the cubic equation x^3 - 6x^2 + 11x - 6 = 0 using the solve_polynomial function.
-    Print the roots.
-"""
-
-
-# Your Solution...
-def cubic_roots(a, b, c, x):
-    return evaluate_polynomial([a, b, c, 0], x)
-
-
-
-
-def main():
-    # 3x^3 - 2x^2 + x - 5
-    value = evaluate_polynomial([3, -2, 1, -5], 2)
-    print(f"evaluate_polynomial: {value}")
-
-    # 5x + 7 = 0
-    value = solve_linear(5, 7)
-    print(f"solve_linear: {value}")
-
-    # x^2 - 5x + 6 = 0
-    roots = solve_quadratic(2, -5, 6)
-    print(f"solve_quadratic: {roots}")
-
-    # x^2 + 4x + 5
-    value = nature_of_roots(2, 4, 5)
-    print(f"nature_of_roots: {value}")
-
-
-if __name__ == "__main__":
-    main()
+def double_summation(a, b, func1=lambda x: x, func2=lambda x: x):
+    return sum(
+        func1(i) * func2(j)
+        for i in range(1, a + 1)
+        for j in range(1, b + 1)
+    )

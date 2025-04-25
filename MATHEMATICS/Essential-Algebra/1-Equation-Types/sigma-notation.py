@@ -1,8 +1,10 @@
+# sigma_notation_examples.py
+
 """ Sigma Notation (Summation) Examples """
 
 """
     1. Simple Summation with a Loop
-       Compute \sum_{i=1}^{n} i
+       Compute ∑₍ᵢ₌₁₎ⁿ i
 """
 
 
@@ -17,10 +19,9 @@ def simple_summation(n):
 n = 10
 print(f"Sum of i from 1 to {n} is {simple_summation(n)}")  # 55
 
-
 """
     2. Using built-in sum() with a Generator Expression
-       Compute \sum_{i=a}^{b} f(i)
+       Compute ∑₍ᵢ₌ₐ₎ᵇ f(i)
 """
 
 
@@ -33,28 +34,35 @@ print(f"Sum of squares from 1 to 5 is {summation_range(1, 5, lambda x: x ** 2)}"
 
 """
     3. Symbolic Summation with Sympy
-       Compute symbolic sums: \sum_{i=1}^{n} i
+       Compute symbolic sums: ∑₍ᵢ₌₁₎ⁿ i
 """
 from sympy import symbols, summation
 
 i, n = symbols('i n')
 expr = summation(i, (i, 1, n))
-print(f"Symbolic sum of i from 1 to n: {expr}")  # n*(n + 1)/2
+print(f"Symbolic sum ∑₍ᵢ₌₁₎ⁿ i = {expr}")  # n*(n + 1)/2
 print(f"For n=10: {expr.subs(n, 10)}")  # 55
 
+
 """
-    4. Summation using NumPy
-       Compute large summations efficiently, e.g., geometric series:
-       \sum_{i=0}^{n} r^i
+    4. Summation using NumPy (Geometric Series)
+       Compute ∑₍ᵢ₌₀₎ⁿ rⁱ
+       
 """
 import numpy as np
 
-
+"""
+    Explanation:
+    If n = 4, then exponents is [0, 1, 2, 3, 4]
+    NumPy applies the ** operator element-wise.
+    With exponents = [0, 1, 2, 3, 4], it produces [r⁰, r¹, r², r³, r⁴].
+"""
 def geometric_series(n, r):
     exponents = np.arange(0, n + 1)
     return np.sum(r ** exponents)
 
 
+
 r = 0.5
 n_val = 20
-print(f"Sum of geometric series r={r} up to n={n_val} is {geometric_series(n_val, r)}")
+print(f"Sum of geometric series ∑₍ᵢ₌₀₎^{n_val} {r}ⁱ is {geometric_series(n_val, r)}")
