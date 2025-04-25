@@ -34,21 +34,22 @@ def solve_quadratic(a, b, c):
     sqrt_D = cmath.sqrt(D)
     root1 = (-b + sqrt_D) / (2*a)
     root2 = (-b - sqrt_D) / (2*a)
+
     return [root1, root2]
 
 
-def solve_polynomial(coeffs):
+def solve_polynomial(cuffs):
     """Solve general polynomial for roots using numpy if available."""
     if np is None:
         raise ImportError("NumPy is required for solving general polynomials")
-    return np.roots(coeffs)
+    return np.roots(cuffs)
 
 
-def derivative_polynomial(coeffs):
+def derivative_polynomial(cuffs):
     """Compute derivative coefficients of a polynomial."""
-    degree = len(coeffs) - 1
-    deriv_coeffs = [coeffs[i] * (degree - i) for i in range(degree)]
-    return deriv_coeffs
+    degree = len(cuffs) - 1
+    derivatives = [cuffs[i] * (degree - i) for i in range(degree)]
+    return derivatives
 
 
 def main():
