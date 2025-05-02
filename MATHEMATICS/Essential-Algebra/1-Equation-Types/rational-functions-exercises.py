@@ -41,6 +41,7 @@ Print each result clearly.
 """
 Exercise 4: Graphing with Matplotlib
 Write code that:
+- The equation is f(x) = (x**2 - 3*x) / (2*x - 1)
 - Samples x values in the range [-5, 5], avoiding a neighborhood around the vertical asymptote x = 0.5.
 - Computes f(x) for each sampled x.
 - Plots f(x) as a continuous curve.
