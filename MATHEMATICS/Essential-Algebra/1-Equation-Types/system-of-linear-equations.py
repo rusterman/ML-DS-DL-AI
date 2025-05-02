@@ -28,9 +28,10 @@ print("1) Solution of 2×2 system is x, y =", sol)
 """
 import numpy as np
 
-A = np.array([[1, 2, -1],
-              [2, -1, 1],
-              [3, 0, -2]], dtype=float)
+A = np.array([
+    [1, 2, -1],
+    [2, -1, 1],
+    [3, 0, -2]], dtype=float)
 b = np.array([2, 1, -1], dtype=float)
 
 v = np.linalg.solve(A, b)
@@ -53,7 +54,7 @@ eqs = [
 sol_sym = sp.solve(eqs, (x, y))
 print("3) Symbolic solution:", sol_sym)
 # For example, plug in a=1, b=2, c=3, d=4, e=5, f=6:
-
+print("   Example with numbers:", sol_sym.subs({a: 1, b: 2, c: 3, d: 4, e: 5, f: 6}))
 
 """
     4. Graphing Two Equations with Matplotlib
