@@ -4,22 +4,7 @@ linear_system_exercises.py
 Exercises for solving systems of linear equations in Python.
 """
 
-# 1. Cramer's Rule for 2×2
-"""
-Exercise 1: Cramer's Rule for 2×2
-Write a function `solve_2x2(a11, a12, a21, a22, b1, b2)` that:
-- Computes determinant `det = a11*a22 - a12*a21`.
-- Raises `ValueError` if `det == 0`.
-- Calculates `x = (b1*a22 - a12*b2)/det` and `y = (a11*b2 - b1*a21)/det`.
-- Returns the tuple `(x, y)`.
-
-Test your function with the system:
-    2x + y = 5
-    3x − 2y = 4
-and print the solution.
-"""
-
-# 2. NumPy Solve for n×n
+# 1. NumPy Solve for n×n
 """
 Exercise 2: NumPy Solve for n×n
 Using NumPy, solve `A · v = b` for a given square matrix `A` and vector `b`:
@@ -32,7 +17,7 @@ Example:
     b = [2, 1, -1]
 """
 
-# 3. Symbolic Solve with Sympy
+# 2. Symbolic Solve with Sympy
 """
 Exercise 3: Symbolic Solve with Sympy
 Using Sympy, symbolically solve the system:
@@ -44,7 +29,7 @@ Using Sympy, symbolically solve the system:
 - Then substitute `a=1, b=2, c=3, d=4, e=5, f=6` and print the numeric solution.
 """
 
-# 4. Graphical Intersection with Matplotlib
+# 3. Graphical Intersection with Matplotlib
 """
 Exercise 4: Graphical Intersection with Matplotlib
 Plot two lines and mark their intersection:
