@@ -1,48 +1,32 @@
-import numpy as np
-import matplotlib.pyplot as plt
+"""
 
+    1. Before diving in to our syllabus I want to share goals: teaching, inspiring, motivating
+       - It became high demanded field
+       - Programming and Math skills always in a high demand
+       - Upcoming Data Centers in our country
 
-# 1) Define base function f(x) = x^2
-def f(x):
-    """Compute x squared."""
-    return x ** 2
+    2. Many devs and students struggle with ML’s math
 
+    3. Motivation is high, they see ML/AI as reachable and in-demand
 
-# 2) Create domain of x values
-x = np.linspace(-5, 5, 400)
-print("x: ", x)
+    4. Key Obstacle: Applied math holds software engineers back
 
-# 3) Compute transformed functions with explanatory comments
-y_original = f(x)  # Original function
-y_shift_up3 = f(x) + 3  # Shift up by 3 units
-y_shift_right2 = f(x - 2)  # Shift right by 2 units
-y_vert_stretch_1_5 = 1.5 * f(x)  # Vertical stretch by factor of 1.5
-y_horiz_compress_2 = f(2 * x)  # Horizontal compression by factor of 2
-y_reflect_x = -f(x)  # Reflection across x-axis
-y_reflect_y = f(-x)  # Reflection across y-axis
-y_combined = 2 * f(x + 1) + 1  # Combined: vertical scale 2, shift left 1, up 1
+    5. It’s not inherently harder than coding, difficulty comes from bad education
 
-# 4) Purpose: Build a figure containing a 2×4 grid of subplots
-fig, axes = plt.subplots(nrows=2, ncols=4, figsize=(16, 8))
-axes = axes.flatten()
+    6. Math vs. Programming: Math is sequential and interconnected—missing one concept blocks the next
 
-plots = [
-    (y_original, "Original: f(x) = x^2"),
-    (y_shift_up3, "Shift Up 3: f(x) + 3"),
-    (y_shift_right2, "Shift Right 2: f(x - 2)"),
-    (y_vert_stretch_1_5, "Vertical Stretch 1.5: 1.5·f(x)"),
-    (y_horiz_compress_2, "Horizontal Compress 2: f(2x)"),
-    (y_reflect_x, "Reflect X-axis: -f(x)"),
-    (y_reflect_y, "Reflect Y-axis: f(-x)"),
-    (y_combined, "Combined: 2·f(x + 1) + 1")
-]
+    7. Programming is broad, changing, tool-heavy; math is timeless, compact, pure
 
-for ax, (y, title) in zip(axes, plots):
-    ax.plot(x, y)
-    ax.set_title(title)
-    ax.set_xlabel("x")
-    ax.set_ylabel("y")
-    ax.grid(True)
+    8. We will learn math simply, practically, and enjoyably
 
-fig.tight_layout()
-plt.show()
+    9. No rote memorization—build intuition and model concepts yourself as you do with programming
+
+    10. What math will give: Boost creativity, problem-solving, code clarity, and productivity
+
+    11. Deep math understanding empowers you for AI, game dev, scientific programming, and more
+
+    12. Why You Will Succeed?
+        Software engineers already think logically and architecturally
+
+    13. Exploring Syllabus / Methodology + real-world examples + hands-on practice
+"""
