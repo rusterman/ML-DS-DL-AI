@@ -1,6 +1,7 @@
 """
 
     1. Data Types Practice
+    
 
     Exercise:
     Define and print the following variables:
