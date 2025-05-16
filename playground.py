@@ -1,5 +1,4 @@
 """
-
     1. Before diving in to our syllabus I want to share goals: teaching, inspiring, motivating
        - It became high demanded field
        - Programming and Math skills always in a high demand
