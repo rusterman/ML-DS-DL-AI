@@ -32,7 +32,7 @@ sudo apt install python3 python3-pip python3-venv
 ### Step 2: Clone the Repository
 
 ```bash
-git clone https://github.com/rusterman/ML-DS-DL-AI.git
+git clone https://github.com/virgin-code/ML-DS-DL-AI.git
 cd ML-DS-DL-AI
 ```
 
