@@ -28,6 +28,4 @@
         Software engineers already think logically and architecturally
 
     13. Exploring Syllabus / Methodology + real-world examples + hands-on practice
-
-    ++Rustam
 """
