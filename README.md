@@ -79,18 +79,27 @@ sudo apt update
 sudo apt install python3 python3-pip python3-venv
 ```
 
----
+### Step 2: Clone the Repository
 
-### 2️⃣ Clone the repository
+**If you're a student**, you'll need to fork this repository to get read access and sync with updates:
+
+1. **Fork the Repository**: Click the "Fork" button on the [main repository](https://github.com/rusterman/ML-DS-DL-AI) to create your own copy.
+
+2. **Clone Your Fork**:
+```bash
+git clone https://github.com/rusterman/ML-DS-DL-AI.git
+cd ML-DS-DL-AI
+```
+
+Replace `<your-username>` with your actual GitHub username.
+
+**Setup Upstream Remote** (Important for syncing updates):
+
+This allows you to fetch the latest changes from the original repository:
 
 ```bash
-# Clone your fork (recommended for students)
-git clone https://github.com/<your-username>/ML-DS-DL-AI.git
-
-# — or, if you have direct write access —
-# git clone https://github.com/virgin-code/ML-DS-DL-AI.git
-
-cd ML-DS-DL-AI
+git remote add upstream https://github.com/rusterman/ML-DS-DL-AI.git
+git remote -v  # Verify both origin and upstream are listed
 ```
 
 Add the instructor’s repo as **upstream** (one‑time):
@@ -128,75 +137,16 @@ pip install -r requirements.txt
 
 ---
 
-## 💻 Student Workflow
+## 🚀 Workflow for Students
 
-1. **Sync your fork with upstream**
+Follow this simple Git workflow:
 
-   ```bash
-   git fetch upstream
-   git checkout main
-   git merge upstream/main      # or: git rebase upstream/main
-   git push origin main
-   ```
+| Actor   | Step                             | Git Commands                              |
+|---------|----------------------------------|-------------------------------------------|
+| Student | Create a personal solution branch| `git checkout -b solutions/<username>`    |
+| Student | Work locally, commit often       | `git add .`<br>`git commit -m "solve: exercise description"` |
+| Student | Push solutions                   | `git push -u origin solutions/<username>` |
 
-2. **Create your homework branch**
-
-   ```bash
-   git checkout -b solutions/<github-username>/<assignment>
-   ```
-
-3. **Work & commit frequently**
-
-   ```bash
-   git add <files>
-   git commit -m "feat: solve HW-1"
-   ```
-
-4. **Push your branch**
-
-   ```bash
-   git push -u origin solutions/<github-username>/<assignment>
-   ```
-
-5. **Open a Pull Request** (GitHub UI) — instructor will review and give feedback.
-
-6. **Update your homework branch after instructor changes**
-
-   ```bash
-   git fetch upstream
-   git rebase upstream/main     # or: git merge upstream/main
-   # Resolve any conflicts…
-   git push --force-with-lease
-   ```
-
-   > **Tip:** Use `rebase` for a clean history; if you do, remember to push with `--force-with-lease`.
+Replace `<username>` with your actual GitHub username.
 
 ---
-
-## 🛠️ Handy Git Commands
-
-* `git status` — show changed files and current branch.
-* `git log --oneline --graph --all` — compact commit graph.
-* `git branch -a` — list local **and** remote branches.
-* `git remote -v` — show remotes and their URLs.
-* `git fetch <remote>` — download commits without merging.
-* `git pull [--rebase] <remote> <branch>` — fetch *and* integrate.
-* `git checkout <branch>` — switch branches.
-* `git push <remote> <branch>` — upload your branch.
-
----
-
-## ℹ️ System Python vs `venv`
-
-|                      | **System Python**               | **Virtual Environment (`venv`)** |
-| -------------------- | ------------------------------- | -------------------------------- |
-| Scope                | Global (shared by all projects) | Isolated per project             |
-| Admin rights needed? | Often yes (`sudo`)              | No                               |
-| Dependency clashes   | Likely                          | Impossible between projects      |
-| Reproducibility      | Hard                            | Easy (pin versions)              |
-
-> Always create a fresh `venv` for every new project to keep dependencies tidy. 🎉
-
----
-
-Happy coding & learning! 🚀
