@@ -5,3 +5,4 @@ pyplotlib
 pandas
 seaborn
 scikit-learn
+statsmodels
