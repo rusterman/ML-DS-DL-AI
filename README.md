@@ -87,7 +87,7 @@ sudo apt install python3 python3-pip python3-venv
 
 2. **Clone Your Fork**:
 ```bash
-git clone https://github.com/rusterman/ML-DS-DL-AI.git
+git clone https://github.com/virgin-code/ML-DS-DL-AI.git 
 cd ML-DS-DL-AI
 ```
 
@@ -98,7 +98,7 @@ Replace `<your-username>` with your actual GitHub username.
 This allows you to fetch the latest changes from the original repository:
 
 ```bash
-git remote add upstream https://github.com/rusterman/ML-DS-DL-AI.git
+git remote add upstream https://github.com/virgin-code/ML-DS-DL-AI.git
 git remote -v  # Verify both origin and upstream are listed
 ```
 
