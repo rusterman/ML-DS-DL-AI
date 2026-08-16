@@ -45,4 +45,4 @@ A = np.array([
 b = np.array([8, 2])
 
 x, y = np.linalg.solve(A, b)
-print(f"x = {x}, y = {y}")  # x = 3.0, y = 0.666...
+print(f"x = {x}, y = {y}")  # x = 2.8, y = 0.8
