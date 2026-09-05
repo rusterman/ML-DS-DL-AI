@@ -15,7 +15,15 @@ Write a function `filter_rational(a, b)` that:
 
 Test your function with a range from -5 to 5 and print the result.
 """
-
+def filter_rational(a, b):
+    result=[]
+    for x in range(a,b+1):
+        if 2*x-1==0:
+            continue
+        if (x**2 - 3*x) / (2*x - 1)>0:
+            result.append((x,(x**2 - 3*x) / (2*x - 1)))
+    return result
+print(filter_rational(-5,5))
 # 2. Using a List Comprehension
 """
 Exercise 2: Using a List Comprehension
@@ -26,6 +34,8 @@ Using a single list comprehension, build a list of tuples (x, f(x)) where:
 
 Print your resulting list.
 """
+result2=[(x/2, ((x/2)**2 - 3*(x/2)) / (2*(x/2) - 1)) for x in range(0,7) if x!=1]
+print(result2)
 
 # 3. Symbolic Analysis with Sympy
 """
@@ -36,6 +46,18 @@ Using Sympy, perform the following tasks for f(x) = (x**2 - 3*x) / (2*x - 1):
 - Perform polynomial division to determine the oblique/horizontal asymptote (quotient).
 Print each result clearly.
 """
+import sympy as sp
+x=sp.symbols('x')
+f=(x**2 - 3*x) / (2*x - 1)
+numerator=(x**2 - 3*x)
+denominator= (2*x - 1)
+roots_numerator=sp.solve(numerator,x)
+roots_denominator=sp.solve(denominator,x)
+quo,rem=sp.div(numerator,denominator)
+asymptote=quo
+print(f"roots of numerator: {roots_numerator}")
+print(f"vertical asymptotes: {roots_denominator}")
+print(f"oblique/horizontal asymptote: {asymptote}")
 
 # 4. Graphing with Matplotlib
 """
@@ -50,3 +72,22 @@ Write code that:
 - Adds title, labels, legend, and grid.
 Ensure your plot displays the function and its asymptotes clearly.
 """
+import matplotlib.pyplot as plt
+import numpy as np
+
+x1 = np.linspace(-5,0.49,100)
+x2 = np.linspace(0.51,5,100)
+y1=(x1**2-3*x1)/(2*x1-1)
+y2=(x2**2-3*x2)/(2*x2-1)
+plt.plot(x1,y1,'pink',label="f(x)")
+plt.plot(x2,y2,'pink')
+x=np.linspace(-5,5,400)
+asym=x/2-5/4
+plt.plot(x,asym,"b--",label='aysmptote')
+plt.axvline(0.5, linestyle=':',color='magenta',label='Vertical asymptote')
+plt.title("Graph of f(x)")
+plt.xlabel('x')
+plt.ylabel('y')
+plt.grid()
+plt.legend()
+plt.show()

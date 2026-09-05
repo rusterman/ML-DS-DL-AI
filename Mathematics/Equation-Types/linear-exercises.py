@@ -35,3 +35,8 @@ print(solution)
        Use numpy.linalg.solve and print x and y.
 """
 # Your Solution...
+import numpy as np
+A=np.array([[3,2],[2,-1]])
+b=np.array([11,1])
+root=np.linalg.solve(A,b)
+print(f"roots: {root}")
