@@ -1,0 +1,14 @@
+New Features Created:--------------------------------------1. TotalSF
+2. TotalBaths
+3. TotalPorchSF
+4. FinishedToUnfinishedRatio
+5. LivingArea_to_LotArea
+6. BasementRatio
+7. HouseAge
+8. IsNewHouse
+9. HasSecondFloor
+10. HasGarage
+11. Quality_x_Area
+12. Bath_x_Bed
+13. OverallQual_Squared
+14. GrLivArea_Squared
