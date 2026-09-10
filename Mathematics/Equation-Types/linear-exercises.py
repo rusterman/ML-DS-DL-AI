@@ -5,7 +5,9 @@
     Solve the equation 4x - 8 = 12. Write code to compute x and print the result.
 """
 # Your Solution...
-
+a,b,c=4,-8,12
+x=(c-b)/a
+print(f" result: {x}")
 
 """
     2. Symbolic Solution with Sympy
@@ -15,6 +17,11 @@
     Symbolically solve the equation 7x + 5 = 3x + 13. Use sympy and print the solution.
 """
 # Your Solution...
+import sympy as sp
+x=sp.Symbol('x')
+equation = sp.Eq(7*x + 5, 3*x + 13)
+solution = sp.solve(equation, x)
+print(solution)
 
 
 """
@@ -28,3 +35,8 @@
        Use numpy.linalg.solve and print x and y.
 """
 # Your Solution...
+import numpy as np
+A=np.array([[3,2],[2,-1]])
+b=np.array([11,1])
+root=np.linalg.solve(A,b)
+print(f"roots: {root}")
