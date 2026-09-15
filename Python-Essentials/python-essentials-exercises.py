@@ -17,6 +17,23 @@
 
 # Your Solution...
 
+age = 10 
+print(age)
+gravity = 9.81
+print(gravity)
+course_name = "Python Essentials"
+print(course_name)
+numbers_list = [1, 2, 3, 4, 5]
+print(numbers_list)
+coordinates = (50, 100)
+print(coordinates)
+person_info = {"name": "John", "age": 28}
+print(person_info)
+unique_numbers = {1, 2, 3}
+print(unique_numbers)
+is_active = False
+print(is_active)
+
 
 """
     2. Iteration Practice
