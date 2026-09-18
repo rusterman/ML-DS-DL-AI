@@ -14,9 +14,25 @@
     * A set (`set`) containing numbers {1, 2, 2, 3}.
     * A boolean (`bool`) variable set to `False`.
 """
+import math
 
 # Your Solution...
-
+a=10
+print(a)
+b=9.81
+print(b)
+c="Python Essentials"
+print(c)
+ls=[1,2,3,4,5]
+print(ls)
+t=(50,100)
+print(t)
+d={'name':'John', 'age':28}
+print(d)
+set2={1,2,2,3}
+print(set2)
+bl=False
+print(bl)
 
 """
     2. Iteration Practice
@@ -29,6 +45,18 @@
 """
 
 # Your Solution...
+print('---------------------------')
+for i in range(10,0,-1):
+    print(i)
+j=2
+print()
+while j<=10:
+    if j%2==0:
+        print(j)
+    j+=1
+print()
+ls=[x**2 for x in range(1,6)]
+print(ls)
 
 
 """
@@ -45,8 +73,21 @@
 """
 
 # Your Solution...
-
-
+print('---------------------------')
+from math import pi
+def area_of_circle(r):
+    return pi*r**2
+radius=int(input("Enter radius: "))
+print(area_of_circle(radius))
+print()
+def is_even(num):
+    return num%2==0
+print(is_even(int(input("Enter a number: "))))
+print()
+x=int(input("Enter a number: "))
+y=int(input("Enter a number: "))
+m=lambda x1,y1: x1*y1
+print(m(x,y))
 """
     4. Importing and Using Libraries
     
@@ -58,7 +99,16 @@
 """
 
 # Your Solution...
-
+print('---------------------------')
+import math
+print(math.sqrt(64))
+print()
+import numpy as np
+arr=np.array([10,20,30,40,50])
+print(arr)
+print()
+from random import randint
+print(randint(5,15))
 
 """
     5. Symbolic Math with SymPy
@@ -68,7 +118,12 @@
 """
 
 # Your Solution...
-
+print('---------------------------')
+from sympy import symbols, Eq, solve
+x=symbols('x')
+equation=Eq(x**2-5*x+6,0)
+solution= solve(equation,x)
+print("Solution: ", solution)
 
 """
     6. Solving Equations with NumPy
@@ -78,5 +133,13 @@
     4x + 3y = 20
     2x - y = 2
 """
-
 # Your Solution...
+print('---------------------------')
+A=np.array([[4,3],
+            [2,-1]])
+B=np.array([20,2])
+solution=np.linalg.solve(A,B)
+x,y=solution
+print("x: ",f'{x:.2f}')
+print("y: ", f'{y:.2f}')
+
