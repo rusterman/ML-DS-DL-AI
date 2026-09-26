@@ -1,4 +1,6 @@
-New Features Created:--------------------------------------1. TotalSF
+New Features Created:
+--------------------------------------
+1. TotalSF
 2. TotalBaths
 3. TotalPorchSF
 4. FinishedToUnfinishedRatio
