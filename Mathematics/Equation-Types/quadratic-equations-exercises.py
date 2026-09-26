@@ -17,4 +17,23 @@
     Print a message indicating whether the roots are real and distinct, real and equal, or complex.
 """
 # Your Solution...
+a = float(input())
+b = float(input())
+c = float(input())
+D = b*b - 4*a*c
+if(D > 0):
+    print("The equation has two distinct real roots.")
+    x1 = (-b + D**(0.5))/(2*a)
+    x2 = (-b - D**(0.5))/(2*a)
+    print(f"First root: {x1}")
+    print(f"Second root: {x2}")
+ 
+elif(D == 0):
+    print("The equation has two equal real root.")
+    x1 = (-b + D**(0.5))/(2*a)
+    x2 = (-b - D**(0.5))/(2*a)
+    print(f"First root: {x1}")
+    print(f"Second root: {x2}") 
+else:
+    print("The roots of the equation are imaginary.")
 
