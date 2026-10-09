@@ -25,9 +25,9 @@ print("1) (x^2 - 3x)/(2x - 1) > 0 for x in [-5,5]:", filter_rational(-5, 5))
     2. Using a List Comprehension
        Compute f(x) at half‐integer steps in [0, 3], excluding the asymptote.
 """
-xs = [i/2 for i in range(0, 7)]  # 0, 0.5, 1.0, ..., 3.0
+xs = [i/2 for i in range(0, 3)]  # 0, 0.5, 1.0, ..., 3.0
 values = [
-    (x, (x**2 - 3*x)/(2*x - 1))
+    (x, (x**2 - 3*x)/(2*x - 1) + 0)
     for x in xs
     if 2*x - 1 != 0  # exclude x = 0.5
 ]
