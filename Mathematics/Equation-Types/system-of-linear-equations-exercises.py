@@ -27,6 +27,8 @@ v = np.linalg.solve(A, b)
 print(f"v = {v}")
 
 c = A @ v
+# c = np.dot(A, v)
+
 if np.allclose(c, b):
     print(f"A @ v = {c}")
 
