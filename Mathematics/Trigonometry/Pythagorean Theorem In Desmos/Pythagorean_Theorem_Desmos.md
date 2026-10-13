@@ -1,7 +1,7 @@
 ```
 Pythagorean Theorem Graphs in Desmos 
 from 1st quorter to 4th (all variations - 
-- Example + Addtional, Reversed, Reversed + Dynamic Legs):
+- Example + Addtional, Reversed, Reversed + Dynamic Legs, Reversed + Full Quorters):
 
 Example + Addtional versions:
 https://www.desmos.com/calculator/laaofow1ip
@@ -20,4 +20,8 @@ https://www.desmos.com/calculator/9bsj5hxkff
 https://www.desmos.com/calculator/dn6vsafoyc
 https://www.desmos.com/calculator/qevh4ro762
 https://www.desmos.com/calculator/bg197zonxn
+
+Reversed + Full quorters:
+https://www.desmos.com/calculator/gbc3jx3aqj
+
 ```
