@@ -10,3 +10,4 @@ category_encoders
 Pillow
 torch
 torchvision
+ipykernel

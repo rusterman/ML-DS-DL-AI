@@ -4,8 +4,6 @@
     1. Simple Loop
        Compute and print a^x for integer x in [start, end].
 """
-
-
 def compute_powers(a, start, end):
     result = []
     for x in range(start, end + 1):
@@ -20,6 +18,7 @@ print("1) 2^x for x in [-3,5]:", compute_powers(2, -3, 5))
     2. Using a List Comprehension
        For base b and inputs in a list, compute log_b(x) where x > 0.
 """
+# Your Solution... Demonstrated via Taylor (Euler) formula
 import math
 
 b = 3
@@ -47,6 +46,14 @@ print("3b) simplify(log_a(x*y) - (log_a(x)+log_a(y))) =", sp.simplify(expr_log))
 """
     4. Graphing with Matplotlib
        Plot y = a^x and y = log_a(x), show vertical asymptote x=0 for log.
+       
+       Note: Generally it should to be x = log_a(y), but when plotting a graph, 
+             we usually represent the function in the form of y.
+             It is simply for representing the inverse function in the standard form of the y
+             when plotting the graph.
+             This also looks incorrect, as if it's a different equation, but the purpose 
+             of the graph (when constructing the inverse function) is to show the inverse 
+             of the exponential function.
 """
 import numpy as np
 import matplotlib.pyplot as plt

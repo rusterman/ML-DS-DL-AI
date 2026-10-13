@@ -16,6 +16,14 @@
 """
 
 # Your Solution...
+print(int_val := 10)
+print(float_var := 9.81)
+print(char_arr := "Python Essentials")
+print(num_list := [1, 2, 3, 4, 5])
+print(xy_coor := (50, 100))
+print(user_db := {"name": "John" , "age" : 28 })
+print(num_set := {1, 2, 2, 3})
+print(is_bool := False, end="\n\n")
 
 
 """
@@ -29,7 +37,23 @@
 """
 
 # Your Solution...
+for i in range(10, 1, -1):
+    print(i)
 
+print("\n\n")
+
+
+
+val = 2
+while val < 10:
+    print(val)
+    val += 2
+
+print("\n\n")
+
+
+
+print(cube_list := [x**3 for x in range(1, 5)], end="\n\n")
 
 """
     3. Functions Practice
@@ -45,7 +69,22 @@
 """
 
 # Your Solution...
+def area_of_circle(radius):
+    return 3.14 * radius ** 2
 
+print("Area of circle: {} when radius is {}: ".format(area_of_circle(8), 8), end="\n\n")
+
+
+
+def is_even(num):
+    return num & 1 == 0
+
+print("12 is (Odd ? Even): ", is_even(12), end="\n\n")
+
+
+
+multiply = lambda num1, num2: num1 * num2
+print("5 * 10 = ", multiply(5, 10), end="\n\n")
 
 """
     4. Importing and Using Libraries
@@ -58,7 +97,18 @@
 """
 
 # Your Solution...
+import math
+print("The square root of 64 is:", math.sqrt(64), end="\n\n")
 
+
+
+import numpy as np
+print("Numpy array: ", np.array([10, 20, 30, 40, 50]), end="\n\n")
+
+
+
+from random import randint
+print("Random integer number: ", randint(5, 15), end="\n\n")
 
 """
     5. Symbolic Math with SymPy
@@ -68,7 +118,10 @@
 """
 
 # Your Solution...
-
+from sympy import symbols, solve
+x = symbols('x')
+expr = x**2 - 5*x + 6
+print(solve(expr, x), end="\n\n")
 
 """
     6. Solving Equations with NumPy
@@ -80,3 +133,7 @@
 """
 
 # Your Solution...
+import numpy as np
+A_matris = np.array([[4, 3], [2, -1]])
+b_vector = np.array([20, 2])
+print(np.linalg.solve(A_matris, b_vector))
