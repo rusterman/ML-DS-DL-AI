@@ -24,4 +24,7 @@ https://www.desmos.com/calculator/bg197zonxn
 Reversed + Full quorters:
 https://www.desmos.com/calculator/gbc3jx3aqj
 
+R.Atakishiev's task:
+https://www.desmos.com/calculator/fy1k3rrdyi
+
 ```
